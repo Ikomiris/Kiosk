@@ -25,6 +25,16 @@ body {
     text-align: center;
     position: relative;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
 }
 
 .logo {
@@ -93,7 +103,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     -webkit-tap-highlight-color: transparent;
 }
@@ -130,7 +140,8 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px 20px 20px;
+    margin-top: 0;
 }
 
 .card-text {
