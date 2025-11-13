@@ -4,23 +4,27 @@ const CONFIG = {
     services: {
         appointment: {
             url: 'https://calendly.com/calcaen',
-            openInNewWindow: true
+            openInNewWindow: false
         },
         giftcard: {
             url: 'https://ikomiris.ikomiris.eu/giftcard',
-            openInNewWindow: true
+            openInNewWindow: false
         },
         account: {
             url: 'https://example.com/creer-compte', // TODO: Configurer l'URL
-            openInNewWindow: true
+            openInNewWindow: false
         },
         catalog: {
-            url: 'https://example.com/catalogue', // TODO: Configurer l'URL
-            openInNewWindow: true
+            url: 'https://ikomiris.com/catalogue-des-montages-et-effets/',
+            openInNewWindow: false
         },
         faq: {
-            url: 'https://example.com/faq', // TODO: Configurer l'URL
-            openInNewWindow: true
+            url: 'https://ikomiris.com/faq-foire-aux-questions/',
+            openInNewWindow: false
+        },
+        pricing: {
+            url: 'https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/',
+            openInNewWindow: false
         }
     },
     // Timeout d'inactivité en millisecondes (0 = désactivé)

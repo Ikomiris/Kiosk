@@ -174,11 +174,6 @@ body {
     background: #000;
 }
 
-/* Fifth card positioning */
-.service-card:nth-child(5) {
-    grid-column: 1;
-}
-
 /* Background iris */
 .background-iris {
     position: fixed;
@@ -186,7 +181,7 @@ body {
     right: -100px;
     width: 600px;
     height: 600px;
-    background-image: url('visuelKiosk.jpg');
+    background-image: url('assets/oeil.png');
     background-size: cover;
     background-position: bottom right;
     opacity: 0.3;
