@@ -17,10 +17,9 @@
       "_comment": "TODO: Configurer l'URL"
     },
     "catalog": {
-      "url": "https://example.com/catalogue",
+      "url": "https://ikomiris.com/catalogue-des-montages-et-effets/",
       "openInNewWindow": true,
-      "description": "Consulter le catalogue",
-      "_comment": "TODO: Configurer l'URL"
+      "description": "Consulter le catalogue"
     },
     "faq": {
       "url": "https://example.com/faq",
