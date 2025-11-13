@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Créer un compte - Ikomiris</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <!-- Header with logo -->
+    <header class="header">
+        <img src="assets/Logo IKI_Enseigne.png" alt="Ikomiris" class="logo-image">
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Back button -->
+        <div class="back-button-container">
+            <button class="back-button" onclick="window.location.href='index.html'">
+                ← Retour
+            </button>
+        </div>
+
+        <!-- Form container -->
+        <div class="form-container">
+            <h1 class="form-title">Créer un compte</h1>
+            <p class="form-subtitle">Remplissez les informations ci-dessous pour créer votre compte</p>
+
+            <form id="accountForm" class="account-form">
+                <!-- Informations obligatoires -->
+                <div class="form-section">
+                    <h2 class="section-title">Informations obligatoires</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Prénom *</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                required
+                                placeholder="Entrez votre prénom"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Nom *</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                required
+                                placeholder="Entrez votre nom"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Adresse email *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="exemple@email.com"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Numéro de téléphone *</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                placeholder="06 12 34 56 78"
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations optionnelles -->
+                <div class="form-section">
+                    <h2 class="section-title">Informations optionnelles</h2>
+
+                    <div class="form-group">
+                        <label for="street">Adresse postale</label>
+                        <input
+                            type="text"
+                            id="street"
+                            name="street"
+                            placeholder="Numéro et nom de rue"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="addressBis">Complément d'adresse</label>
+                        <input
+                            type="text"
+                            id="addressBis"
+                            name="addressBis"
+                            placeholder="Bâtiment, étage, appartement..."
+                        >
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postcode">Code postal</label>
+                            <input
+                                type="text"
+                                id="postcode"
+                                name="postcode"
+                                placeholder="75001"
+                                pattern="[0-9]{5}"
+                                maxlength="5"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">Ville</label>
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="Paris"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Pays</label>
+                        <input
+                            type="text"
+                            id="country"
+                            name="country"
+                            value="France"
+                            placeholder="France"
+                        >
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+
+                <!-- Submit button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-button" id="submitButton">
+                        <span class="button-text">Créer mon compte</span>
+                        <span class="button-loader" style="display: none;">
+                            <span class="loader"></span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Background iris image -->
+    <div class="background-iris"></div>
+
+    <!-- JavaScript -->
+    <script src="account.js"></script>
+</body>
+</html>
