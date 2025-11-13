@@ -27,6 +27,11 @@
       "openInNewWindow": true,
       "description": "Consulter la FAQ",
       "_comment": "TODO: Configurer l'URL"
+    },
+    "pricing": {
+      "url": "https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/",
+      "openInNewWindow": true,
+      "description": "Tarifs"
     }
   },
   "settings": {

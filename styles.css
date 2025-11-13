@@ -174,11 +174,6 @@ body {
     background: #000;
 }
 
-/* Fifth card positioning */
-.service-card:nth-child(5) {
-    grid-column: 1;
-}
-
 /* Background iris */
 .background-iris {
     position: fixed;

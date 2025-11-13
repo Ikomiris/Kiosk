@@ -21,6 +21,10 @@ const CONFIG = {
         faq: {
             url: 'https://example.com/faq', // TODO: Configurer l'URL
             openInNewWindow: true
+        },
+        pricing: {
+            url: 'https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/',
+            openInNewWindow: true
         }
     },
     // Timeout d'inactivité en millisecondes (0 = désactivé)
