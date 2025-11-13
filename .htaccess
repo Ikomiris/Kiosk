@@ -1,0 +1,107 @@
+# Configuration du cache pour l'interface Kiosk Ikomiris
+
+# Activer le module de contrôle du cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Désactiver le cache pour les fichiers HTML
+    # Les navigateurs récupéreront toujours la dernière version
+    <FilesMatch "\.(html|htm)$">
+        ExpiresDefault "access plus 0 seconds"
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+
+    # Cache long pour les fichiers CSS (1 mois)
+    <FilesMatch "\.(css)$">
+        ExpiresDefault "access plus 1 month"
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # Cache long pour les fichiers JavaScript (1 mois)
+    <FilesMatch "\.(js)$">
+        ExpiresDefault "access plus 1 month"
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # Cache long pour les images (3 mois)
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|ico|webp)$">
+        ExpiresDefault "access plus 3 months"
+        Header set Cache-Control "public, max-age=7776000"
+    </FilesMatch>
+
+    # Cache pour les fichiers de configuration JSON (pas de cache)
+    <FilesMatch "\.(json)$">
+        ExpiresDefault "access plus 0 seconds"
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+    </FilesMatch>
+</IfModule>
+
+# Configuration alternative si mod_expires n'est pas disponible
+<IfModule !mod_expires.c>
+    <IfModule mod_headers.c>
+        # Désactiver le cache pour HTML
+        <FilesMatch "\.(html|htm)$">
+            Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+            Header set Pragma "no-cache"
+            Header set Expires "0"
+        </FilesMatch>
+
+        # Cache long pour CSS et JS
+        <FilesMatch "\.(css|js)$">
+            Header set Cache-Control "public, max-age=2592000"
+        </FilesMatch>
+
+        # Cache long pour les images
+        <FilesMatch "\.(jpg|jpeg|png|gif|svg|ico|webp)$">
+            Header set Cache-Control "public, max-age=7776000"
+        </FilesMatch>
+
+        # Pas de cache pour JSON
+        <FilesMatch "\.(json)$">
+            Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+# Empêcher la mise en cache des anciennes versions lors de la navigation
+<IfModule mod_headers.c>
+    # Forcer la revalidation pour les fichiers HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set ETag ""
+        Header unset Last-Modified
+    </FilesMatch>
+</IfModule>
+
+# Compression gzip pour améliorer les performances
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Types MIME corrects
+<IfModule mod_mime.c>
+    AddType text/html .html .htm
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType image/png .png
+    AddType image/jpeg .jpg .jpeg
+    AddType image/svg+xml .svg
+</IfModule>
+
+# Sécurité supplémentaire
+<IfModule mod_headers.c>
+    # Empêcher l'affichage dans une iframe (protection contre clickjacking)
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Activer la protection XSS du navigateur
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Empêcher le sniffing de type MIME
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
