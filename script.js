@@ -3,23 +3,23 @@
 const CONFIG = {
     services: {
         appointment: {
-            url: 'https://example.com/rendez-vous',
+            url: 'https://calendly.com/calcaen',
             openInNewWindow: true
         },
         giftcard: {
-            url: 'https://example.com/carte-cadeau',
+            url: 'https://ikomiris.ikomiris.eu/giftcard',
             openInNewWindow: true
         },
         account: {
-            url: 'https://example.com/creer-compte',
+            url: 'https://example.com/creer-compte', // TODO: Configurer l'URL
             openInNewWindow: true
         },
         catalog: {
-            url: 'https://example.com/catalogue',
+            url: 'https://example.com/catalogue', // TODO: Configurer l'URL
             openInNewWindow: true
         },
         faq: {
-            url: 'https://example.com/faq',
+            url: 'https://example.com/faq', // TODO: Configurer l'URL
             openInNewWindow: true
         }
     },
