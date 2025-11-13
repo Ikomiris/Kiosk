@@ -1,0 +1,40 @@
+{
+  "services": {
+    "appointment": {
+      "url": "https://example.com/rendez-vous",
+      "openInNewWindow": true,
+      "description": "Prendre rendez-vous"
+    },
+    "giftcard": {
+      "url": "https://example.com/carte-cadeau",
+      "openInNewWindow": true,
+      "description": "Acheter une carte cadeau"
+    },
+    "account": {
+      "url": "https://example.com/creer-compte",
+      "openInNewWindow": true,
+      "description": "Créer un compte"
+    },
+    "catalog": {
+      "url": "https://example.com/catalogue",
+      "openInNewWindow": true,
+      "description": "Consulter le catalogue"
+    },
+    "faq": {
+      "url": "https://example.com/faq",
+      "openInNewWindow": true,
+      "description": "Consulter la FAQ"
+    }
+  },
+  "settings": {
+    "inactivityTimeout": 120000,
+    "kioskMode": true,
+    "screenBrightness": 255,
+    "keepScreenOn": true
+  },
+  "branding": {
+    "storeName": "Ikomiris",
+    "primaryColor": "#5bc5c5",
+    "accentColor": "#f9b233"
+  }
+}

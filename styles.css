@@ -1,0 +1,269 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #a8a8a8;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Header */
+.header {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.logo-i {
+    color: #5bc5c5;
+    font-weight: 400;
+}
+
+.logo-text {
+    color: #fff;
+}
+
+/* Main content */
+.main-content {
+    position: relative;
+    z-index: 5;
+    padding: 30px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome message */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-title {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.welcome-subtitle {
+    font-size: 24px;
+    font-style: italic;
+    color: #fff;
+}
+
+/* Services grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Service card */
+.service-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 35px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #333;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.service-card:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Card image */
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* Card label */
+.card-label {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f9b233;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    display: inline-block;
+}
+
+/* Specific card styling */
+.card-appointment .card-image {
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(200,200,200,0.4));
+}
+
+.card-giftcard {
+    background: #1a1a1a;
+}
+
+.card-account {
+    background: linear-gradient(135deg, rgba(100,100,100,0.5), rgba(150,150,150,0.5));
+}
+
+.card-catalog {
+    background: #1a1a1a;
+}
+
+.card-faq {
+    background: #000;
+}
+
+/* Fifth card positioning */
+.service-card:nth-child(5) {
+    grid-column: 1;
+}
+
+/* Background iris */
+.background-iris {
+    position: fixed;
+    bottom: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background-image: url('visuelKiosk.jpg');
+    background-size: cover;
+    background-position: bottom right;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Tablet landscape optimization */
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    .services-grid {
+        max-width: 900px;
+        gap: 35px;
+    }
+
+    .welcome-title {
+        font-size: 32px;
+    }
+
+    .welcome-subtitle {
+        font-size: 28px;
+    }
+
+    .card-text {
+        font-size: 36px;
+    }
+}
+
+/* Tablet portrait optimization */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .main-content {
+        padding: 20px 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 400px;
+    }
+
+    .service-card {
+        aspect-ratio: 1.2;
+    }
+
+    .card-text {
+        font-size: 28px;
+    }
+}
+
+/* Touch optimization */
+@media (hover: none) {
+    .service-card:hover {
+        transform: none;
+    }
+}
+
+/* Prevent text selection and context menu */
+.service-card * {
+    pointer-events: none;
+}
+
+.service-card {
+    pointer-events: auto;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.service-card.loading {
+    animation: pulse 1s infinite;
+}
+
+/* Accessibility - focus states */
+.service-card:focus {
+    outline: 3px solid #5bc5c5;
+    outline-offset: 4px;
+}
+
+/* Fully Kiosk Browser optimizations */
+body.kiosk-mode {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
