@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Ikomiris - Kiosk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with logo -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-i">i</span><span class="logo-text">kom</span><span class="logo-i">i</span><span class="logo-text">ris</span>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Welcome message -->
+        <div class="welcome-message">
+            <p class="welcome-title">Bienvenue chez Ikomiris.</p>
+            <p class="welcome-subtitle">Que pouvons nous faire pour vous</p>
+        </div>
+
+        <!-- Service cards grid -->
+        <div class="services-grid">
+            <!-- Card 1: Prendre rendez-vous -->
+            <button class="service-card card-appointment" data-service="appointment">
+                <div class="card-image">
+                    <img src="assets/calendar.jpg" alt="Calendrier">
+                </div>
+                <div class="card-label">
+                    <span class="card-text">Prendre<br>rendez-vous</span>
+                </div>
+            </button>
+
+            <!-- Card 2: Acheter une carte cadeau -->
+            <button class="service-card card-giftcard" data-service="giftcard">
+                <div class="card-image">
+                    <img src="assets/gift.jpg" alt="Carte cadeau">
+                </div>
+                <div class="card-label">
+                    <span class="card-text">Acheter une<br>carte cadeau</span>
+                </div>
+            </button>
+
+            <!-- Card 3: Créer un compte -->
+            <button class="service-card card-account" data-service="account">
+                <div class="card-image">
+                    <img src="assets/account.jpg" alt="Créer un compte">
+                </div>
+                <div class="card-label">
+                    <span class="card-text">Créer un<br>compte</span>
+                </div>
+            </button>
+
+            <!-- Card 4: Consulter le catalogue -->
+            <button class="service-card card-catalog" data-service="catalog">
+                <div class="card-image">
+                    <img src="assets/iris.jpg" alt="Catalogue">
+                </div>
+                <div class="card-label">
+                    <span class="card-text">Consulter le<br>catalogue</span>
+                </div>
+            </button>
+
+            <!-- Card 5: Consulter la FAQ -->
+            <button class="service-card card-faq" data-service="faq">
+                <div class="card-image">
+                    <img src="assets/faq.jpg" alt="FAQ">
+                </div>
+                <div class="card-label">
+                    <span class="card-text">Consulter<br>la FAQ</span>
+                </div>
+            </button>
+        </div>
+    </main>
+
+    <!-- Background iris image -->
+    <div class="background-iris"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
