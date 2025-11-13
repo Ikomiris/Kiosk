@@ -19,7 +19,7 @@ const CONFIG = {
             openInNewWindow: true
         },
         faq: {
-            url: 'https://example.com/faq', // TODO: Configurer l'URL
+            url: 'https://ikomiris.com/catalogue-des-montages-et-effets/',
             openInNewWindow: true
         },
         pricing: {

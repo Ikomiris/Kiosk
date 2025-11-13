@@ -22,10 +22,9 @@
       "description": "Consulter le catalogue"
     },
     "faq": {
-      "url": "https://example.com/faq",
+      "url": "https://ikomiris.com/catalogue-des-montages-et-effets/",
       "openInNewWindow": true,
-      "description": "Consulter la FAQ",
-      "_comment": "TODO: Configurer l'URL"
+      "description": "Consulter la FAQ"
     },
     "pricing": {
       "url": "https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/",
