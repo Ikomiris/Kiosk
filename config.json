@@ -2,33 +2,33 @@
   "services": {
     "appointment": {
       "url": "https://calendly.com/calcaen",
-      "openInNewWindow": true,
+      "openInNewWindow": false,
       "description": "Prendre rendez-vous"
     },
     "giftcard": {
       "url": "https://ikomiris.ikomiris.eu/giftcard",
-      "openInNewWindow": true,
+      "openInNewWindow": false,
       "description": "Acheter une carte cadeau"
     },
     "account": {
       "url": "https://example.com/creer-compte",
-      "openInNewWindow": true,
+      "openInNewWindow": false,
       "description": "Créer un compte",
       "_comment": "TODO: Configurer l'URL"
     },
     "catalog": {
       "url": "https://ikomiris.com/catalogue-des-montages-et-effets/",
-      "openInNewWindow": true,
+      "openInNewWindow": false,
       "description": "Consulter le catalogue"
     },
     "faq": {
       "url": "https://ikomiris.com/catalogue-des-montages-et-effets/",
-      "openInNewWindow": true,
+      "openInNewWindow": false,
       "description": "Consulter la FAQ"
     },
     "pricing": {
       "url": "https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/",
-      "openInNewWindow": true,
+      "openInNewWindow": false,
       "description": "Tarifs"
     }
   },
