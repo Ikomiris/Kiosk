@@ -181,7 +181,7 @@ body {
     right: -100px;
     width: 600px;
     height: 600px;
-    background-image: url('visuelKiosk.jpg');
+    background-image: url('assets/oeil.png');
     background-size: cover;
     background-position: bottom right;
     opacity: 0.3;
