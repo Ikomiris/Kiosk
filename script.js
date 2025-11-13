@@ -11,7 +11,7 @@ const CONFIG = {
             openInNewWindow: false
         },
         account: {
-            url: 'https://example.com/creer-compte', // TODO: Configurer l'URL
+            url: 'account.html',
             openInNewWindow: false
         },
         catalog: {
