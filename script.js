@@ -15,15 +15,15 @@ const CONFIG = {
             openInNewWindow: false
         },
         catalog: {
-            url: 'https://ikomiris.com/catalogue-des-montages-et-effets/',
+            url: 'https://ikomiris.com/catalogue-des-montages-et-effets/?kiosque=1',
             openInNewWindow: false
         },
         faq: {
-            url: 'https://ikomiris.com/faq-foire-aux-questions/',
+            url: 'https://ikomiris.com/faq-foire-aux-questions/?kiosque=1',
             openInNewWindow: false
         },
         pricing: {
-            url: 'https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/',
+            url: 'https://ikomiris.com/tarif-des-tirages-et-prises-de-vues/?kiosque=1',
             openInNewWindow: false
         }
     },
