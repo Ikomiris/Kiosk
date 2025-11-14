@@ -295,12 +295,11 @@ function setupKidsButton() {
     });
 
     function closeVideoModal() {
-        // Arrêter et réinitialiser la vidéo
-        mascotteVideo.pause();
-        mascotteVideo.currentTime = 0;
-
-        // Fermer la modal
+        // Fermer la modal d'abord
         videoModal.classList.remove('active');
+
+        // Arrêter la vidéo
+        mascotteVideo.pause();
 
         // Réinitialiser le timer d'inactivité
         resetInactivityTimer();
