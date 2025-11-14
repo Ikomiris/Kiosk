@@ -253,3 +253,61 @@ if (typeof window !== 'undefined') {
         config: CONFIG
     };
 }
+
+// Gestion du bouton enfant et de la vidéo mascotte
+function setupKidsButton() {
+    const kidsButton = document.getElementById('kidsButton');
+    const videoModal = document.getElementById('videoModal');
+    const mascotteVideo = document.getElementById('mascotteVideo');
+
+    if (!kidsButton || !videoModal || !mascotteVideo) {
+        console.error('Kids button or video elements not found');
+        return;
+    }
+
+    // Clic sur le bouton enfant
+    kidsButton.addEventListener('click', function() {
+        console.log('Kids button clicked');
+
+        // Réinitialiser le timer d'inactivité
+        resetInactivityTimer();
+
+        // Afficher la modal
+        videoModal.classList.add('active');
+
+        // Jouer la vidéo
+        mascotteVideo.currentTime = 0; // Recommencer depuis le début
+        mascotteVideo.play().catch(err => {
+            console.error('Error playing video:', err);
+            closeVideoModal();
+        });
+    });
+
+    // Quand la vidéo se termine
+    mascotteVideo.addEventListener('ended', function() {
+        console.log('Video ended, returning to home');
+        closeVideoModal();
+    });
+
+    // Permettre de fermer la vidéo en cliquant dessus
+    videoModal.addEventListener('click', function() {
+        closeVideoModal();
+    });
+
+    function closeVideoModal() {
+        // Arrêter et réinitialiser la vidéo
+        mascotteVideo.pause();
+        mascotteVideo.currentTime = 0;
+
+        // Fermer la modal
+        videoModal.classList.remove('active');
+
+        // Réinitialiser le timer d'inactivité
+        resetInactivityTimer();
+    }
+}
+
+// Initialiser le bouton enfant au chargement
+document.addEventListener('DOMContentLoaded', function() {
+    setupKidsButton();
+});
