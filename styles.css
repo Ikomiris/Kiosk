@@ -174,6 +174,63 @@ body {
     background: #000;
 }
 
+/* Kids button container */
+.kids-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Kids button */
+.kids-button {
+    background-color: #5bc5c5;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.kids-button:hover {
+    background-color: #4ab0b0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.kids-button:active {
+    transform: scale(0.98);
+}
+
+/* Video modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.mascotte-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* Background iris */
 .background-iris {
     position: fixed;
